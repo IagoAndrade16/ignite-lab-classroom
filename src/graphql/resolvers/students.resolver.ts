@@ -13,7 +13,7 @@ export class StudentsResolver {
   ) {}
 
   @Query(() => [Student])
-  // @UseGuards(AuthorizationGuard)
+  @UseGuards(AuthorizationGuard)
   students() {
     return this.studentService.listAllStudents();
   }

@@ -15,7 +15,7 @@ export class EnrollmentsResolver {
   ) {}
 
   @Query(() => [Enrollment])
-  // @UseGuards(AuthorizationGuard)
+  @UseGuards(AuthorizationGuard)
   enrollments() {
     return this.enrollmentsService.listAllEnrollments();
   }
