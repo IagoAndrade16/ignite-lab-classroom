@@ -23,10 +23,11 @@ scalar DateTime
 
 type Student {
   id: ID!
-  enrollment: [Enrollment!]!
+  enrollments: [Enrollment!]!
 }
 
 type Query {
   students: [Student!]!
+  enrollments: [Enrollment!]!
   courses: [Course!]!
 }
