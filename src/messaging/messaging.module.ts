@@ -1,10 +1,7 @@
 import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
-import { KafkaService } from './kafka.service';
+import { PurchaseController } from './controllers/purchases.controller';
 
 @Module({
-  imports: [ConfigModule.forRoot()],
-  providers: [KafkaService],
-  exports: [KafkaService],
+  controllers: [PurchaseController],
 })
 export class MessagingModule {}
